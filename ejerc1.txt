@@ -1,0 +1,40 @@
+class Estudiantes:
+    pass
+    def __init__(self,nombre,apellido):
+     self.nombre=nombre
+     self.apellido=apellido
+
+    def ObtenerNotas(self):
+       return"Las notas de estudiante {} {} son las siguientes".format(self.nombre,self.apellido)
+
+
+NotasCiclo=Estudiantes("Javier", "Guzman")
+print(NotasCiclo.ObtenerNotas())
+
+
+
+class Materias:
+    materia1="Matematicas"
+    materias2="Ciencias"
+    materias3="Sociales"
+    
+
+Materia=Materias
+print("La materia de " + Materias.materia1+ " Su nota son las siguientes")
+
+
+from Estudiantes import Estudiantes
+from materias import Materias
+
+class Notas(Estudiantes,Materias):
+    lab=8
+    parcial=8
+          
+
+    def verNotas():
+      
+      return"estudiante {} materia {} ".format(Estudiantes.nombre,Materias.materia1 )
+    
+
+notaFinal=Notas("lab"+Notas.lab+"Parcial"+Notas.parcial)
+print(notaFinal.verNotas())

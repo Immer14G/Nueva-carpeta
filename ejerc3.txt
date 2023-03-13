@@ -1,0 +1,41 @@
+class JugadorUNO:
+    def _init_(self, nombre, poder):
+        self.nombre = nombre
+        self.poder = poder
+    
+    def enseñar(self):
+        return"El nombre del luchador es {} con un poder de {}%".format(self.nombre, self.poder)
+        
+Peleador = JugadorUNO("SANITAGO", 100)
+print(Peleador.enseñar())
+
+
+
+class Jugador2:
+    def _init_(self, nombre2, poder2):
+        self.nombre2 = nombre2
+        self.poder2 = poder2
+    
+    def Enseñar2(self):
+        return"El nombre del luchador es {} con un poder de {}%".format(self.nombre2, self.poder2)
+        
+peleador2 = Jugador2("EL MACHO", 90)
+print(peleador2.Enseñar2())
+
+from jugador import JugadorUNO
+from jugadorDos import Jugador2
+from jugador import Peleador
+from jugadorDos import peleador2
+
+
+
+class Juego(JugadorUNO,Jugador2):
+    pass
+    def luchadorEs():
+        return"peleadors {} con poder {} vs contricante {} con poder  {}".format(Peleador.nombre, Peleador.poder, peleador2.nombre2, peleador2.poder2)
+
+luchadores1 = Juego
+print(luchadores1.luchadorEs())
+print("la pelea empieza " + peleador2.nombre2 + " tira  ataque")
+print("contrataca " + Peleador.nombre + " ataque")
+print("El poder del luchador" + peleador2.nombre2 + " es de 53%")

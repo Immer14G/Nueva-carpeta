@@ -1,0 +1,60 @@
+class genero:
+    pass
+
+    def __init__(self,pelisAccion,pelisComedia,pelisTerror):
+        self.pelisAccion= pelisAccion
+        self.pelisComedia = pelisComedia
+        self.pelisTerror = pelisTerror
+
+
+
+TodaslasCategoria = genero("comedia","accion","Terror")
+from genero import genero 
+from genero import TodaslasCategoria
+
+class Peliculas(genero):
+    pass
+
+    def __init__(self,Accion, Comedia,Terror):
+        self.Accion = Accion 
+        self.Comedia = Comedia 
+        self.Terror = Terror 
+
+    def CategoriaAccion(self):
+        return "La pelicula {} es de categoria {}".format(self.Comedia,TodaslasCategoria.pelisComedia)
+    
+    def CategoriaComedia(self):
+        return "La pelicula {} es de categoria {}".format(self.Accion,TodaslasCategoria.pelisAccion)
+    
+    def CategoriaTerror(self):
+        return "La pelicula {} es de categoria {}".format(self.Terror,TodaslasCategoria.pelisTerror)
+    
+Pelicula = Peliculas("el Chapulin coolorado","El marino", "la llorona")
+
+
+from Peliculas import Peliculas
+from Peliculas import pelicula
+
+class Cliente(Peliculas):
+    pass
+
+    def Elegir():
+        pelis = True
+        while (pelis):
+           
+            print("1 peliculas de accion 2 comedia  3peliculas")
+            print("\n")
+            eleccion = int(("ingrese  la categoria que desea ver:"))
+           
+            if eleccion == 1:
+                print(pelicula.Comedia())
+            elif eleccion == 2:
+                print(pelicula.Accion())
+            elif eleccion == 3:
+                print(pelicula.Terror())
+           
+            else:
+                print("otra vez")
+
+escoger =  Cliente
+escoger.Elegir()
